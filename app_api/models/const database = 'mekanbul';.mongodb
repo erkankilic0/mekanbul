@@ -12,7 +12,7 @@ db.mekanlar.insertOne(
   ],
   "koordinatlar": {
     "enlem": "37.7",
-    "boylam": "30.5"
+    "boylam": "35.4"
   },
   "saatler": [
     {
