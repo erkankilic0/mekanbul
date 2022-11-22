@@ -1,3 +1,4 @@
+const { query } = require("express");
 var mongoose = require("mongoose");
 var Mekan = mongoose.model("mekan");
 const cevapOlustur = function (res, status, content) {
@@ -28,7 +29,7 @@ const mekanlariListele = async (req, res) => {
         distanceField: "mesafe",
         spherical: true,
     };
-    if ((!enlem && boylam !== 0) || (!enlem && boylam !== 0)) {
+    if (!enlem && boylam !== 0) {
         cevapOlustur(res, 404, {
             "hata": "enlem ve boylam zorunlu parametreler",
         });
@@ -58,9 +59,6 @@ const mekanlariListele = async (req, res) => {
         cevapOlustur(res, 404, e);
     }
 };
-const mekanEkle = function (req, res) {
-    cevapOlustur(res, 200, { "durum": "başarılı" });
-}
 const mekanGetir = function (req, res) {
     if (req.params && req.params.mekanid) {
         Mekan.findById(req.params.mekanid).exec(function (hata, mekan) {
@@ -82,6 +80,9 @@ const mekanGuncelle = function (req, res) {
     cevapOlustur(res, 200, { "durum": "başarılı" });
 }
 const mekanSil = function (req, res) {
+    cevapOlustur(res, 200, { "durum": "başarılı" });
+}
+const mekanEkle = function (req, res) {
     cevapOlustur(res, 200, { "durum": "başarılı" });
 }
 
