@@ -7,7 +7,7 @@ var ctrlDigerleri = require('../controllers/digerleri');
 router.get('/', ctrlMekanlar.anaSayfa);
 router.get('/mekan/:mekanid', ctrlMekanlar.mekanBilgisi);
 router.get('/mekan/yorum/yeni', ctrlMekanlar.yorumEkle);
-router.get('/hakkinda', ctrlDigerleri.hakkinda);
+//router.get('/hakkinda', ctrlMekanlar.mekanBilgisi);
 
 
 module.exports = router;
