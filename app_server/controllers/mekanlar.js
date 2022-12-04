@@ -20,6 +20,7 @@ var mesafeyiFormatla = function(mesafe) {
 
 var anaSayfaOlustur = function(res,mekanListesi) {
     var mesaj;
+    console.log(mekanListesi)
     if(!(mekanListesi instanceof Array)) {
         mesaj = "API HATASI: Birşeyler ters gitti";
         mekanListesi = [];
@@ -98,7 +99,5 @@ const yorumEkle = function (req, res, next) {
   module.exports = {
     anaSayfa,
     mekanBilgisi,
-    yorumEkle,
-    anaSayfaOlustur,
-    mesafeyiFormatla
+    yorumEkle
   };
