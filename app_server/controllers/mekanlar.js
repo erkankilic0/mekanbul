@@ -85,7 +85,8 @@ const hataGoster = function (res, hata) {
 }
 
 const mekanBilgisi = function (req, res, next) {
-  axios.get(apiSecenekleri.sunucu + apiSecenekleri.apiYolu + req.params.mekanid)
+  axios
+    .get(apiSecenekleri.sunucu + apiSecenekleri.apiYolu + req.params.mekanid)
     .then(function (response) {
       req.session.mekanAdi = response.data.ad;
       detaySayfasiOlustur(res, response.data)
